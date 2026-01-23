@@ -1,7 +1,9 @@
 [{
 
+  google-site-verification: google7ce19a8d148f536f.html
+  
   "relation": ["delegate_permission/common.handle_all_urls"],
-
+  
   "target": {
 
     "namespace": "android_app",
