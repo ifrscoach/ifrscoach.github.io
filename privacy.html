@@ -1,247 +1,268 @@
 <!DOCTYPE html>
-
 <html lang="en">
-
 <head>
-
     <meta charset="UTF-8">
-
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <title>Privacy Policy - IFRS Coach</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
 
     <style>
+        :root {
+            --primary-color: #1a2530;
+            --accent-color: #0366d6;
+            --bg-color: #f4f7f6;
+            --card-bg: #ffffff;
+            --text-color: #4a5568;
+            --heading-color: #1a202c;
+            --border-color: #e2e8f0;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
 
         body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.8;
+            margin: 0;
+            padding: 40px 20px;
+            -webkit-font-smoothing: antialiased;
+        }
 
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-
-            line-height: 1.6;
-
-            color: #333;
-
-            max-width: 800px;
-
+        /* Card Container */
+        .legal-container {
+            background-color: var(--card-bg);
+            max-width: 850px;
             margin: 0 auto;
+            padding: 60px 80px;
+            border-radius: 12px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.08);
+            opacity: 0;
+            animation: containerFadeIn 1s ease-out forwards;
+        }
 
-            padding: 20px;
-
+        /* Typography */
+        h1, h2, h3 {
+            font-family: 'Playfair Display', serif;
+            color: var(--heading-color);
         }
 
         h1 {
-
-            border-bottom: 2px solid #eee;
-
-            padding-bottom: 10px;
-
-            margin-bottom: 20px;
-
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            border-bottom: none;
+            text-align: center;
+            letter-spacing: -0.5px;
         }
 
         h2 {
-
-            margin-top: 30px;
-
-            color: #2c3e50;
-
-            font-size: 1.25rem;
-
+            font-size: 1.5rem;
+            margin-top: 40px;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid var(--border-color);
         }
 
         h3 {
-
-            margin-top: 20px;
-
-            font-size: 1.1rem;
-
-            color: #444;
-
+            font-size: 1.15rem;
+            margin-top: 30px;
+            margin-bottom: 10px;
+            color: #2d3748;
+            font-weight: 700;
         }
 
-        p, ul {
-
-            margin-bottom: 16px;
-
+        p, ul, ol {
+            margin-bottom: 20px;
+            font-size: 1.05rem;
         }
 
         strong {
-
-            color: #000;
-
+            color: var(--heading-color);
+            font-weight: 600;
         }
 
+        /* Lists */
+        ul {
+            padding-left: 20px;
+        }
+        
+        li {
+            margin-bottom: 8px;
+        }
+
+        /* Date Badge */
+        .date-badge {
+            display: block;
+            text-align: center;
+            font-size: 0.9rem;
+            color: #718096;
+            margin-bottom: 50px;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        /* Links */
         a {
-
-            color: #0366d6;
-
+            color: var(--accent-color);
             text-decoration: none;
-
+            transition: all 0.2s ease;
+            border-bottom: 1px dotted transparent;
         }
 
         a:hover {
-
-            text-decoration: underline;
-
+            color: #024bb0;
+            border-bottom: 1px solid #024bb0;
         }
 
-        .date {
-
-            color: #666;
-
-            font-style: italic;
-
-            margin-bottom: 30px;
-
-        }
-
+        /* Footer */
         .footer {
-
-            margin-top: 50px;
-
-            padding-top: 20px;
-
-            border-top: 1px solid #eee;
-
-            font-size: 0.9rem;
-
-            color: #666;
-
+            margin-top: 60px;
+            padding-top: 30px;
+            border-top: 1px solid var(--border-color);
             text-align: center;
-
+            font-size: 0.9rem;
+            color: #a0aec0;
         }
 
+        /* --- Animations --- */
+        .reveal-section {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s cubic-bezier(0.165, 0.84, 0.44, 1);
+        }
+
+        .reveal-section.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        @keyframes containerFadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Mobile Responsiveness */
+        @media (max-width: 600px) {
+            body { padding: 20px 10px; }
+            .legal-container { padding: 40px 25px; }
+            h1 { font-size: 2rem; }
+        }
     </style>
-
 </head>
-
 <body>
 
-
-
-    <h1>Privacy Policy</h1>
-
-    <p class="date">Effective Date: January 19, 2026</p>
-
-
-
-    <h2>1. Introduction</h2>
-
-    <p>Welcome to IFRS Coach. This application is developed and maintained by <strong>Mustafa Sharara</strong>. We value your privacy and are committed to protecting your personal data. This policy explains what information we collect, how we use it, and your rights regarding your data.</p>
-
-
-
-    <h2>2. Data We Collect</h2>
-
-    <p>We collect specific data to provide account synchronization, progress tracking, and premium features.</p>
-
-
-
-    <h3>a. Account Information</h3>
-
-    <p>If you choose to create an account, we collect your <strong>email address</strong> and <strong>name</strong> via Firebase Authentication (email/password, Google Sign-In, or Apple Sign-In). This allows you to log in across multiple devices and recover your account.</p>
-
-
-
-    <h3>b. User-Generated Content</h3>
-
-    <p>We store your learning progress, bookmarks, notes, and profile preferences (such as avatar choice and preferred language) securely on our cloud servers (Google Firestore) so that your data remains synced across your devices.</p>
-
-
-
-    <h3>c. Log Data & Usage</h3>
-
-    <p>In a case of an error in the app, we collect data and information (through third-party products) on your phone called Log Data. This Log Data may include information such as your device Internet Protocol (“IP”) address, device name, operating system version, the configuration of the app when utilizing our Service, the time and date of your use of the Service, and other statistics.</p>
-
-
-
-    <h3>d. Third-Party Services</h3>
-
-    <p>The app uses third-party services that may collect information used to identify you. Link to privacy policy of third-party service providers used by the app:</p>
-
-    <ul>
-
-        <li><a href="https://www.google.com/policies/privacy/" target="_blank">Google Play Services</a></li>
-
-        <li><a href="https://support.google.com/admob/answer/6128543?hl=en" target="_blank">AdMob</a></li>
-
-        <li><a href="https://firebase.google.com/policies/analytics" target="_blank">Google Analytics for Firebase</a></li>
-
-        <li><a href="https://firebase.google.com/support/privacy/" target="_blank">Firebase Crashlytics</a></li>
-
-    </ul>
-
-
-
-    <h2>3. How We Use Your Data</h2>
-
-    <p>The data we collect is used solely for:</p>
-
-    <ul>
-
-        <li><strong>Account Sync:</strong> Allowing you to access your notes and progress on any device.</li>
-
-        <li><strong>App Stability:</strong> Improving performance and fixing crashes (Crashlytics).</li>
-
-        <li><strong>Feature Development:</strong> Understanding user engagement to build better tools (Analytics).</li>
-
-        <li><strong>Ad Support:</strong> Serving relevant advertisements to support the free version of the app (AdMob).</li>
-
-    </ul>
-
-
-
-    <h2>4. Data Storage and Security</h2>
-
-    <p><strong>Cloud Storage:</strong> Your account data and progress are stored securely using Google Cloud Firestore, which employs industry-standard encryption in transit and at rest.</p>
-
-    <p><strong>Security:</strong> We value your trust in providing us your information, thus we are striving to use commercially acceptable means of protecting it. But remember that no method of transmission over the internet, or method of electronic storage is 100% secure and reliable.</p>
-
-
-
-    <h2>5. Children’s Privacy</h2>
-
-    <p>These Services do not address anyone under the age of 13. We do not knowingly collect personally identifiable information from children under 13. In the case we discover that a child under 13 has provided us with personal information, we immediately delete this from our servers. If you are a parent or guardian and you are aware that your child has provided us with personal information, please contact us so that we will be able to do the necessary actions.</p>
-
-
-
-    <h2>6. Your Rights & Account Deletion</h2>
-
-    <p>You have full control over your data. You may request the deletion of your account and associated data at any time. Upon deletion, your account, email, notes, and progress will be permanently removed from our servers.</p>
-
-    
-
-    <ul>
-
-        <li><strong>Immediate In-App Deletion:</strong> You can delete your account instantly by navigating to <strong>Profile > Delete Account</strong> within the app.</li>
-
-        <li><strong>Deletion Request by Email:</strong> If you cannot access the app, you may request data deletion by emailing us at <a href="mailto:support@ifrsapp.zohodesk.eu">support@ifrsapp.zohodesk.eu</a> with the subject line "Delete Account". We will process your request within 30 days.</li>
-
-        <li><strong>Opt-Out:</strong> You can opt-out of personalized ads and analytics tracking via the "Data & Privacy Settings" menu inside the app.</li>
-
-    </ul>
-
-
-
-    <h2>7. Changes to This Policy</h2>
-
-    <p>We may update this Privacy Policy from time to time. We will notify you of any changes by posting the new Privacy Policy on this page.</p>
-
-
-
-    <h2>8. Contact Us</h2>
-
-    <p>If you have any questions or suggestions about our Privacy Policy, do not hesitate to contact us at: <a href="mailto:support@ifrsapp.zohodesk.eu">support@ifrsapp.zohodesk.eu</a></p>
-
-
-
-    <div class="footer">
-
-        &copy; 2026 Mustafa Sharara. All rights reserved.
+    <div class="legal-container">
+        
+        <h1>Privacy Policy</h1>
+        <span class="date-badge">Effective Date: January 19, 2026</span>
+
+        <div class="reveal-section">
+            <h2>1. Introduction</h2>
+            <p>Welcome to IFRS Coach. This application is developed and maintained by <strong>Mustafa Sharara</strong>. We value your privacy and are committed to protecting your personal data. This policy explains what information we collect, how we use it, and your rights regarding your data.</p>
+        </div>
+
+        <div class="reveal-section">
+            <h2>2. Data We Collect</h2>
+            <p>We collect specific data to provide account synchronization, progress tracking, and premium features.</p>
+
+            <h3>a. Account Information</h3>
+            <p>If you choose to create an account, we collect your <strong>email address</strong> and <strong>name</strong> via Firebase Authentication (email/password, Google Sign-In, or Apple Sign-In). This allows you to log in across multiple devices and recover your account.</p>
+
+            <h3>b. User-Generated Content</h3>
+            <p>We store your learning progress, bookmarks, notes, and profile preferences (such as avatar choice and preferred language) securely on our cloud servers (Google Firestore) so that your data remains synced across your devices.</p>
+
+            <h3>c. Log Data & Usage</h3>
+            <p>In a case of an error in the app, we collect data and information (through third-party products) on your phone called Log Data. This Log Data may include information such as your device Internet Protocol (“IP”) address, device name, operating system version, the configuration of the app when utilizing our Service, the time and date of your use of the Service, and other statistics.</p>
+
+            <h3>d. Third-Party Services</h3>
+            <p>The app uses third-party services that may collect information used to identify you. Link to privacy policy of third-party service providers used by the app:</p>
+            <ul>
+                <li><a href="https://www.google.com/policies/privacy/" target="_blank">Google Play Services</a></li>
+                <li><a href="https://support.google.com/admob/answer/6128543?hl=en" target="_blank">AdMob</a></li>
+                <li><a href="https://firebase.google.com/policies/analytics" target="_blank">Google Analytics for Firebase</a></li>
+                <li><a href="https://firebase.google.com/support/privacy/" target="_blank">Firebase Crashlytics</a></li>
+            </ul>
+        </div>
+
+        <div class="reveal-section">
+            <h2>3. How We Use Your Data</h2>
+            <p>The data we collect is used solely for:</p>
+            <ul>
+                <li><strong>Account Sync:</strong> Allowing you to access your notes and progress on any device.</li>
+                <li><strong>App Stability:</strong> Improving performance and fixing crashes (Crashlytics).</li>
+                <li><strong>Feature Development:</strong> Understanding user engagement to build better tools (Analytics).</li>
+                <li><strong>Ad Support:</strong> Serving relevant advertisements to support the free version of the app (AdMob).</li>
+            </ul>
+        </div>
+
+        <div class="reveal-section">
+            <h2>4. Data Storage and Security</h2>
+            <p><strong>Cloud Storage:</strong> Your account data and progress are stored securely using Google Cloud Firestore, which employs industry-standard encryption in transit and at rest.</p>
+            <p><strong>Security:</strong> We value your trust in providing us your information, thus we are striving to use commercially acceptable means of protecting it. But remember that no method of transmission over the internet, or method of electronic storage is 100% secure and reliable.</p>
+        </div>
+
+        <div class="reveal-section">
+            <h2>5. Children’s Privacy</h2>
+            <p>These Services do not address anyone under the age of 13. We do not knowingly collect personally identifiable information from children under 13. In the case we discover that a child under 13 has provided us with personal information, we immediately delete this from our servers. If you are a parent or guardian and you are aware that your child has provided us with personal information, please contact us so that we will be able to do the necessary actions.</p>
+        </div>
+
+        <div class="reveal-section">
+            <h2>6. Your Rights & Account Deletion</h2>
+            <p>You have full control over your data. You may request the deletion of your account and associated data at any time. Upon deletion, your account, email, notes, and progress will be permanently removed from our servers.</p>
+            
+            <ul>
+                <li><strong>Immediate In-App Deletion:</strong> You can delete your account instantly by navigating to <strong>Profile > Delete Account</strong> within the app.</li>
+                <li><strong>Deletion Request by Email:</strong> If you cannot access the app, you may request data deletion by emailing us at <a href="mailto:support@ifrsapp.zohodesk.eu">support@ifrsapp.zohodesk.eu</a> with the subject line "Delete Account". We will process your request within 30 days.</li>
+                <li><strong>Opt-Out:</strong> You can opt-out of personalized ads and analytics tracking via the "Data & Privacy Settings" menu inside the app.</li>
+            </ul>
+        </div>
+
+        <div class="reveal-section">
+            <h2>7. Changes to This Policy</h2>
+            <p>We may update this Privacy Policy from time to time. We will notify you of any changes by posting the new Privacy Policy on this page.</p>
+        </div>
+
+        <div class="reveal-section">
+            <h2>8. Contact Us</h2>
+            <p>If you have any questions or suggestions about our Privacy Policy, do not hesitate to contact us at: <a href="mailto:support@ifrsapp.zohodesk.eu">support@ifrsapp.zohodesk.eu</a></p>
+        </div>
+
+        <div class="footer reveal-section">
+            &copy; 2026 Mustafa Sharara. All rights reserved.
+        </div>
 
     </div>
 
+    <script>
+        // Scroll Reveal Animation Script
+        document.addEventListener("DOMContentLoaded", function() {
+            const observerOptions = {
+                root: null,
+                rootMargin: '0px',
+                threshold: 0.1
+            };
 
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, observerOptions);
+
+            const sections = document.querySelectorAll('.reveal-section');
+            sections.forEach(section => {
+                observer.observe(section);
+            });
+        });
+    </script>
 
 </body>
-
 </html>
